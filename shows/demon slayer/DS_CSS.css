@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    touch-action: manipulation;
+}
+
+body {
+    background: white;
+}
+
+.mainVideo {
+    position: absolute;
+    height: 456px;
+    width: 792px;
+    border: none;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.switchStrip {
+    position: absolute;
+    bottom: 15%;
+    height: 5%;
+    width: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+    background-color: black;
+    border-radius: 10px;
+}
+.switchStripPrev {
+    position: absolute;
+    bottom: 8%;
+    height: 5%;
+    width: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+    background-color: black;
+    border-radius: 10px;
+}
+
+.titleText {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Oswald;
+    margin-top: 1%;
+}
+.underTitleText {
+    font-size: 30px;
+    font-family: Oswald;
+    margin-top: 2%;
+    text-decoration: underline;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.underTitleTextArea {
+    width: 100%;
+    text-align: center;
+}
+
+.textColor {
+    color: black
+}
+
+#PREV {
+    position: absolute;
+    font-size: 30px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: white;
+    height: fit-content;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    line-height: 1.5;
+    animation: fadeBlueOut 0.1s forwards;
+}
+#PREV:hover {
+    animation: fadeBlueIn 0.1s forwards;
+}
+#NEXT {
+    position: absolute;
+    font-size: 30px;
+    font-family: sans-serif;
+    cursor: pointer;
+    color: white;
+    height: fit-content;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    line-height: 1.5;
+    animation: fadeBlueOut 0.1s forwards;
+}
+#NEXT:hover {
+    animation: fadeBlueIn 0.1s forwards;
+}
+@keyframes fadeBlueIn {
+    0% {
+        color: white
+    }
+    100% {
+        color:rgb(0, 153, 255)
+    }
+}
+@keyframes fadeBlueOut {
+    0% {
+        color:rgb(0, 153, 255)
+    }
+    100% {
+        color: white
+    }
+}
+
+.titleLink {
+    margin-top: 30px;
+}
+
+.season1Button {
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    background-color: aquamarine;
+    border-radius: 15px;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: letterSpaceIn 1s forwards;
+    color: black
+}
+@keyframes letterSpaceOut {
+    0% {
+        letter-spacing: normal;
+    }
+    100% {
+        letter-spacing: 5px;
+    }
+}
+@keyframes letterSpaceIn {
+    0% {
+        letter-spacing: 5px;
+    }
+    100% {
+        letter-spacing: normal;
+    }
+}
+.season1Button:hover {
+    animation: letterSpaceOut 1s forwards;
+}
+.timelineButton {
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    background-color: aquamarine;
+    border-radius: 15px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: letterSpaceIn 1s forwards;
+    color: black
+}
+.timelineButton:hover {
+    animation: letterSpaceOut 1s forwards;
+}
+.season2Button {
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    background-color: aquamarine;
+    border-radius: 15px;
+    left: 50%;
+    bottom: 28%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: letterSpaceIn 1s forwards;
+    color: black
+}
+.season2Button:hover {
+    animation: letterSpaceOut 1s forwards;
+}
+@media screen and (orientation: portrait) {
+    .season1Button, .timelineButton, .season2Button {
+        height: 230px;
+        width: 80%;
+        margin-top: 5%;
+    }
+}
+
+.swordImage {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonTitle {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Oswald;
+}
+
+.tanjiroButton {
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 0;
+    margin: 1%;
+    cursor: pointer;
+    animation: headTiltAnti 0.2s forwards linear;
+}
+@keyframes headTilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+@keyframes headTiltAnti {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.tanjiroButton:hover {
+    animation: headTilt 0.2s forwards linear;
+}
+
+.invertButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1%;
+    height: 40px;
+    width: 120px;
+    border-left: none;
+    border-top: none;
+    font-size: 20px;
+    font-family: Oswald;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.timelineTable {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Oswald;
+    width: 100%;
+    text-align: center;
+}
